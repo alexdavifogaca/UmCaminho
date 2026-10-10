@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caminho — Jesus, a Bíblia e a fé cristã</title>
+  <meta name="description" content="Caminho é um site cristão para conhecer Jesus, ler a Bíblia e dar os primeiros passos na fé, no seu ritmo e sem pressa.">
+  <meta property="og:title" content="Caminho — Há um caminho, e ele tem nome">
+  <meta property="og:description" content="Conheça Jesus, leia a Bíblia e explore a fé cristã de forma simples, bonita e respeitosa.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/hero-caminho.jpg">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#171715">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="module" src="/assets/js/site.js"></script>
+  <script type="module" src="/assets/js/plano.js"></script>
+</head>
+<body data-page="inicio">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header site-header--overlay" data-header>
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="/" aria-label="Caminho — página inicial">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="4" fill="#171715"/>
+          <path d="M10 27 C12 19 13.5 13 16 5 C18.5 13 20 19 22 27" fill="none" stroke="#D7C8A9" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="8" r="1.8" fill="#D7C8A9"/>
+        </svg>
+        <span class="logo__text">Caminho</span>
+      </a>
+      <div class="site-header__actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu-toggle>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Abrir menu</span>
+        </button>
+        <nav class="site-nav" id="nav-principal" aria-label="Navegação principal" data-nav>
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/jesus" data-nav-page="jesus">Jesus</a></li>
+            <li><a class="site-nav__link" href="/biblia" data-nav-page="biblia">Bíblia</a></li>
+            <li><a class="site-nav__link" href="/reflexoes" data-nav-page="reflexoes">Reflexões</a></li>
+            <li><a class="site-nav__link" href="/igrejas" data-nav-page="igrejas">Igrejas</a></li>
+            <li><a class="site-nav__link" href="/busca" data-nav-page="busca">Busca</a></li>
+          </ul>
+          <a class="button button--small site-nav__cta" href="/oracao">Peça oração</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero hero--letterbox" aria-labelledby="hero-titulo">
+      <img class="hero__media" src="/assets/img/hero-caminho.jpg" alt="Estrada de terra que some na névoa, entre árvores, ao amanhecer" width="2000" height="1150" fetchpriority="high">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="kicker">Caminho</p>
+          <h1 class="hero__title" id="hero-titulo">Há um caminho. E ele tem nome.</h1>
+          <p class="hero__text">Um site tranquilo para conhecer Jesus, ler a Bíblia e dar os primeiros passos na fé — no seu ritmo, sem pressa e sem julgamento.</p>
+          <div class="hero__actions">
+            <a class="button button--large" href="/jesus">Conhecer Jesus</a>
+            <a class="button button--secondary button--large" href="/biblia">Abrir a Bíblia</a>
+          </div>
+          <p class="hero__caption">Foto: simon_berger (CC0) · Wikimedia Commons</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="versiculo-titulo">
+      <div class="container container--narrow">
+        <div class="verse-card" data-verse-of-day>
+          <p class="verse-card__label" id="versiculo-titulo">Versículo do dia</p>
+          <blockquote class="verse-card__text" data-verse-text>Carregando o versículo de hoje…</blockquote>
+          <p class="verse-card__reference" data-verse-ref></p>
+          <div class="verse-card__actions">
+            <button class="button button--secondary button--small" type="button" data-verse-copy>Copiar</button>
+            <button class="button button--quiet button--small" type="button" data-verse-next>Outro versículo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="comecar-titulo">
+      <div class="container">
+        <header class="section__header">
+          <p class="kicker">Por onde começar</p>
+          <h2 class="section__title" id="comecar-titulo">Três portas de entrada</h2>
+          <p class="section__intro">Se você está começando, não precisa entender tudo hoje. Escolha uma porta e entre com calma.</p>
+        </header>
+        <div class="card-grid">
+          <article class="card card--interactive">
+            <div class="card__media">
+              <img class="card__img" src="/assets/img/card-jesus.jpg" alt="Lago tranquilo ao entardecer, com nuvens rosadas" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Fé</p>
+              <h3 class="card__title"><a class="card__link" href="/jesus">Quem é Jesus</a></h3>
+              <p class="card__text">O que os Evangelhos contam sobre ele, por que ele veio e o que significa segui-lo hoje.</p>
+            </div>
+          </article>
+          <article class="card card--interactive">
+            <div class="card__media">
+              <img class="card__img" src="/assets/img/card-biblia.jpg" alt="Céu estrelado dourado acima do horizonte" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Leitura</p>
+              <h3 class="card__title"><a class="card__link" href="/biblia">Ler a Bíblia</a></h3>
+              <p class="card__text">Um leitor simples e completo, com favoritos e planos de leitura — sem precisar criar conta.</p>
+            </div>
+          </article>
+          <article class="card card--interactive">
+            <div class="card__media">
+              <img class="card__img" src="/assets/img/card-jornada.jpg" alt="Trilha subindo por um vale coberto de névoa" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Primeiros passos</p>
+              <h3 class="card__title"><a class="card__link" href="/jesus#jornada">A jornada com Jesus</a></h3>
+              <p class="card__text">Cinco etapas simples para entender a fé cristã e, se quiser, dar o seu primeiro passo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight theme-raised" aria-labelledby="plano-titulo">
+      <div class="container">
+        <div class="split">
+          <div>
+            <header class="section__header">
+              <p class="kicker">Plano de leitura</p>
+              <h2 class="section__title" id="plano-titulo">Mateus em 28 dias</h2>
+              <p class="section__intro">Um capítulo por dia para conhecer a vida de Jesus por inteiro. Não precisa se matricular em nada: é só começar.</p>
+            </header>
+            <div class="reading-plan" data-plan>
+              <div class="reading-plan__header">
+                <h3 class="reading-plan__title">Evangelho de Mateus</h3>
+                <p class="reading-plan__meta">28 dias · um capítulo por dia</p>
+              </div>
+              <p class="reading-plan__description">Toque em um dia para marcá-lo como lido. O progresso fica salvo apenas no seu aparelho.</p>
+              <div class="progress progress--thick" aria-hidden="true"><span class="progress__bar" data-plan-progress></span></div>
+              <p class="progress__label" data-plan-label></p>
+              <ol class="reading-plan__days" data-plan-days></ol>
+              <div class="reading-plan__footer">
+                <a class="button" href="/biblia#mt/1">Começar a ler</a>
+                <button class="button button--quiet button--small" type="button" data-plan-reset>Reiniciar progresso</button>
+              </div>
+            </div>
+          </div>
+          <div class="stack stack--loose">
+            <blockquote class="quote quote--large">
+              <p class="quote__text">“Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.”</p>
+              <cite class="quote__cite">Mateus 11:28 — Almeida Revisada</cite>
+            </blockquote>
+            <a class="ratio ratio--16x9" href="/jesus" aria-label="Ler mais sobre quem é Jesus">
+              <img class="img-cover img-graded" src="/assets/img/hero-jesus.jpg" alt="" width="2000" height="1100" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section theme-paper" aria-labelledby="comunidade-titulo">
+      <div class="container">
+        <div class="split">
+          <div>
+            <p class="kicker">Comunidade</p>
+            <h2 class="section__title" id="comunidade-titulo">Não caminhe sozinho</h2>
+            <p class="lead">A fé cristã nunca foi feita para ser vivida no isolamento. Encontrar uma comunidade próxima pode fazer toda a diferença no começo (e no caminho todo).</p>
+            <div class="button-group">
+              <a class="button button--secondary" href="/igrejas">Encontrar uma igreja perto de mim</a>
+            </div>
+          </div>
+          <div class="ratio ratio--4x3">
+            <img class="img-cover img-graded" src="/assets/img/card-igrejas.jpg" alt="Interior de uma igreja durante o culto" width="1200" height="800" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="oracao-titulo">
+      <div class="container container--narrow text-center">
+        <p class="kicker">Oração</p>
+        <h2 class="section__title" id="oracao-titulo">Quer que oremos por você?</h2>
+        <p class="lead mx-auto">Basta escrever o que vai no seu coração. A sua mensagem é lida com cuidado e nunca é publicada.</p>
+        <div class="button-group cluster--center">
+          <a class="button button--large" href="/oracao">Fazer um pedido de oração</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo" href="/">
+            <img class="logo__mark" src="/assets/img/favicon.svg" alt="">
+            <span class="logo__text">Caminho</span>
+          </a>
+          <p class="meta">Apresentar Jesus, ensinar a Bíblia e acompanhar pessoas nos primeiros passos da fé — com calma e verdade.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Explorar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/jesus">Quem é Jesus</a></li>
+            <li><a class="site-footer__link" href="/biblia">Bíblia online</a></li>
+            <li><a class="site-footer__link" href="/reflexoes">Reflexões</a></li>
+            <li><a class="site-footer__link" href="/busca">Buscar no site</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Acompanhar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/igrejas">Encontrar uma igreja</a></li>
+            <li><a class="site-footer__link" href="/oracao">Pedir oração</a></li>
+            <li><a class="site-footer__link" href="/jesus#jornada">A jornada com Jesus</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Sobre</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/sobre">Sobre o projeto</a></li>
+            <li><a class="site-footer__link" href="/sobre#creditos">Créditos e licenças</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>© <span data-year></span> Caminho. Feito com fé.</p>
+        <p>Texto bíblico: Almeida Revisada (domínio público).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

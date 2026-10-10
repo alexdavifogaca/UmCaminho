@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre o projeto — Caminho</title>
+  <meta name="description" content="O que é o Caminho, como ele trata seus dados com privacidade, e os créditos e licenças de textos, fontes e imagens.">
+  <meta property="og:title" content="Sobre o projeto — Caminho">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/card-caminho.jpg">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#171715">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="module" src="/assets/js/site.js"></script>
+</head>
+<body data-page="sobre">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header site-header--sticky" data-header>
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="/" aria-label="Caminho — página inicial">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="4" fill="#171715"/>
+          <path d="M10 27 C12 19 13.5 13 16 5 C18.5 13 20 19 22 27" fill="none" stroke="#D7C8A9" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="8" r="1.8" fill="#D7C8A9"/>
+        </svg>
+        <span class="logo__text">Caminho</span>
+      </a>
+      <div class="site-header__actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu-toggle>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Abrir menu</span>
+        </button>
+        <nav class="site-nav" id="nav-principal" aria-label="Navegação principal" data-nav>
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/jesus" data-nav-page="jesus">Jesus</a></li>
+            <li><a class="site-nav__link" href="/biblia" data-nav-page="biblia">Bíblia</a></li>
+            <li><a class="site-nav__link" href="/reflexoes" data-nav-page="reflexoes">Reflexões</a></li>
+            <li><a class="site-nav__link" href="/igrejas" data-nav-page="igrejas">Igrejas</a></li>
+            <li><a class="site-nav__link" href="/busca" data-nav-page="busca">Busca</a></li>
+          </ul>
+          <a class="button button--small site-nav__cta" href="/oracao">Peça oração</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="section" aria-labelledby="sobre-titulo">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <p class="kicker">Sobre</p>
+          <h1 class="section__title" id="sobre-titulo">Um caminho para conhecer a fé</h1>
+          <p class="section__intro">O Caminho nasceu de um desejo simples: apresentar Jesus, ensinar a Bíblia e acompanhar pessoas nos primeiros passos da fé — sem pressa, sem julgamento e sem truques de conversão.</p>
+        </header>
+        <div class="prose">
+          <p>Há quem chegue até aqui com muita bagagem religiosa e há quem não tenha nenhuma. Este site foi desenhado para as duas pessoas. Você pode conhecer Jesus na página <a href="/jesus">“Quem é Jesus”</a>, ler a Bíblia inteira no <a href="/biblia">leitor online</a>, encontrar uma comunidade em <a href="/igrejas">“Igrejas”</a> e, se desejar, <a href="/oracao">pedir um momento de oração</a>.</p>
+          <p>Nada aqui substitui a vida real: a Bíblia lida em comunidade, o pão partido, o abraço sincero. Este site é apenas uma porta — ou, como o nome sugere, um caminho.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section theme-raised" aria-labelledby="privacidade-titulo">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <p class="kicker">Seus dados</p>
+          <h2 class="section__title" id="privacidade-titulo">Privacidade sem letra miúda</h2>
+          <p class="section__intro">Este site não usa rastreadores, não pede cadastro e não vende dados. O que guarda, guarda pouco e explica por quê.</p>
+        </header>
+        <dl class="fact-list">
+          <dt>Favoritos e progresso</dt>
+          <dd>Versículos salvos, tamanho de texto e plano de leitura ficam <strong>apenas no seu navegador</strong> (localStorage) e podem ser apagados a qualquer momento.</dd>
+          <dt>Pedidos de oração</dt>
+          <dd>Ficam no servidor do site, em arquivo não publicado, para serem lidos pelas pessoas que intercedem. Você permanece anônimo se não informar nome ou e-mail.</dd>
+          <dt>Busca de igrejas</dt>
+          <dd>Usa o OpenStreetMap (dados livres). O servidor só vê a coordenada ou o nome do lugar buscado, e nunca armazena sua localização.</dd>
+          <dt>Busca no site</dt>
+          <dd>Acontece no seu aparelho. Nenhum termo digitado sai do dispositivo.</dd>
+          <dt>Fontes e recursos</dt>
+          <dd>Tudo é servido pelo próprio site: nenhum servidor de terceiros carrega scripts, fontes ou imagens.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="creditos" aria-labelledby="creditos-titulo">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <p class="kicker">Créditos e licenças</p>
+          <h2 class="section__title" id="creditos-titulo">De quem é cada parte</h2>
+          <p class="section__intro">Este site é feito com conteúdo livre e gratuito, e quer honrar quem o produziu.</p>
+        </header>
+        <div class="stack stack--loose">
+          <section aria-labelledby="c1">
+            <h3 class="reading-plan__title" id="c1">Texto bíblico</h3>
+            <p class="text-muted">Tradução de João Ferreira de Almeida, revisão em domínio público, distribuída via repositório aberto da comunidade. Conferida e dividida por livro (66 livros, mais de 31 mil versículos).</p>
+          </section>
+          <section aria-labelledby="c2">
+            <h3 class="reading-plan__title" id="c2">Fontes tipográficas</h3>
+            <p class="text-muted">Cormorant Garamond, Lora e Inter, baixadas e hospedadas localmente sob a licença <a href="https://scripts.sil.org/OFL" rel="noopener noreferrer" target="_blank">SIL Open Font License 1.1</a>.</p>
+          </section>
+          <section aria-labelledby="c3">
+            <h3 class="reading-plan__title" id="c3">Fotografias</h3>
+            <p class="text-muted">Todas licenciadas como domínio público (CC0), via Wikimedia Commons:</p>
+            <ul class="list-reset meta">
+              <li>Estrada na névoa — simon_berger (CC0)</li>
+              <li>Lago ao entardecer — Делфина (CC0)</li>
+              <li>Céu estrelado — Lfc2025a (CC0)</li>
+              <li>Velas no escuro — pixel2013 (CC0)</li>
+              <li>Interior de igreja — Evedawn99 (CC0)</li>
+            </ul>
+          </section>
+          <section aria-labelledby="c4">
+            <h3 class="reading-plan__title" id="c4">Igrejas</h3>
+            <p class="text-muted">Dados de localização: © contribuidores do <a href="https://www.openstreetmap.org/copyright" rel="noopener noreferrer" target="_blank">OpenStreetMap</a>, licença ODbL.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="contato-titulo">
+      <div class="container container--narrow text-center">
+        <p class="kicker">Contato</p>
+        <h2 class="section__title" id="contato-titulo">Quer conversar?</h2>
+        <div class="button-group cluster--center">
+          <a class="button" href="/oracao">Enviar um pedido de oração</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo" href="/">
+            <img class="logo__mark" src="/assets/img/favicon.svg" alt="">
+            <span class="logo__text">Caminho</span>
+          </a>
+          <p class="meta">Apresentar Jesus, ensinar a Bíblia e acompanhar pessoas nos primeiros passos da fé — com calma e verdade.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Explorar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/jesus">Quem é Jesus</a></li>
+            <li><a class="site-footer__link" href="/biblia">Bíblia online</a></li>
+            <li><a class="site-footer__link" href="/reflexoes">Reflexões</a></li>
+            <li><a class="site-footer__link" href="/busca">Buscar no site</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Acompanhar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/igrejas">Encontrar uma igreja</a></li>
+            <li><a class="site-footer__link" href="/oracao">Pedir oração</a></li>
+            <li><a class="site-footer__link" href="/jesus#jornada">A jornada com Jesus</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Sobre</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/sobre">Sobre o projeto</a></li>
+            <li><a class="site-footer__link" href="/sobre#creditos">Créditos e licenças</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>© <span data-year></span> Caminho. Feito com fé.</p>
+        <p>Texto bíblico: Almeida Revisada (domínio público).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

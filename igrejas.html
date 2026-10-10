@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Igrejas perto de você — Caminho</title>
+  <meta name="description" content="Encontre igrejas cristãs perto de você usando o OpenStreetMap — sem cadastro, sem rastreio. Busque por bairro, cidade ou pela sua localização.">
+  <meta property="og:title" content="Igrejas perto de você — Caminho">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/hero-igrejas.jpg">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#171715">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="module" src="/assets/js/site.js"></script>
+  <script type="module" src="/assets/js/igrejas.js"></script>
+</head>
+<body data-page="igrejas">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header site-header--overlay" data-header>
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="/" aria-label="Caminho — página inicial">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="4" fill="#171715"/>
+          <path d="M10 27 C12 19 13.5 13 16 5 C18.5 13 20 19 22 27" fill="none" stroke="#D7C8A9" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="8" r="1.8" fill="#D7C8A9"/>
+        </svg>
+        <span class="logo__text">Caminho</span>
+      </a>
+      <div class="site-header__actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu-toggle>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Abrir menu</span>
+        </button>
+        <nav class="site-nav" id="nav-principal" aria-label="Navegação principal" data-nav>
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/jesus" data-nav-page="jesus">Jesus</a></li>
+            <li><a class="site-nav__link" href="/biblia" data-nav-page="biblia">Bíblia</a></li>
+            <li><a class="site-nav__link" href="/reflexoes" data-nav-page="reflexoes">Reflexões</a></li>
+            <li><a class="site-nav__link" href="/igrejas" data-nav-page="igrejas">Igrejas</a></li>
+            <li><a class="site-nav__link" href="/busca" data-nav-page="busca">Busca</a></li>
+          </ul>
+          <a class="button button--small site-nav__cta" href="/oracao">Peça oração</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero hero--compact" aria-labelledby="igrejas-titulo">
+      <img class="hero__media" src="/assets/img/hero-igrejas.jpg" alt="Interior de uma igreja durante o culto, com pessoas reunidas" width="2000" height="1100" fetchpriority="high">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="kicker">Comunidade</p>
+          <h1 class="hero__title" id="igrejas-titulo">Igrejas perto de você</h1>
+          <p class="hero__text">A fé nasce no coração, mas cresce em família. Encontre uma comunidade cristã na sua região — os dados vêm do OpenStreetMap, sem cadastro nem rastreamento.</p>
+          <p class="hero__caption">Foto: Evedawn99 (CC0) · Wikimedia Commons</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="buscador-titulo">
+      <div class="container">
+        <div class="church-finder">
+          <div class="church-finder__panel">
+            <header class="section__header stack--tight">
+              <h2 class="section__title" id="buscador-titulo">Como encontrar</h2>
+              <p class="section__intro">Digite um bairro, cidade ou CEP, ou use a sua localização. Dica: visite antes de decidir — boa igreja se conhece pelo acolhimento.</p>
+            </header>
+            <form data-church-form>
+              <div class="stack">
+                <div class="search-field search-field--large">
+                  <span class="search-field__icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                      <circle cx="11" cy="11" r="7"></circle>
+                      <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                    </svg>
+                  </span>
+                  <label class="visually-hidden" for="igrejas-query">Bairro, cidade ou CEP</label>
+                  <input class="search-field__input" id="igrejas-query" type="text" autocomplete="address-level2" placeholder="Ex.: Centro do Rio de Janeiro" data-church-query>
+                  <button class="search-field__button" type="submit">Buscar</button>
+                </div>
+                <div class="button-group">
+                  <button class="button button--secondary" type="button" data-church-geo>Usar minha localização</button>
+                </div>
+              </div>
+            </form>
+            <p class="alert alert--error" role="alert" data-church-error hidden></p>
+            <p class="meta" data-found-location></p>
+            <div class="map-frame">
+              <iframe class="map-frame__embed" data-map title="Mapa da região da busca" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="church-finder__panel">
+            <p class="section__intro" data-church-summary></p>
+            <p class="alert alert--info" data-church-alert hidden></p>
+            <ul class="church-results" data-church-list></ul>
+            <p class="meta">Fonte: OpenStreetMap © contribuidores (licença ODbL). Os horários e contatos devem ser confirmados com cada comunidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight theme-paper" aria-labelledby="dica-titulo">
+      <div class="container container--narrow">
+        <div class="quote quote--large">
+          <p class="quote__text">“Não abandonando a nossa congregação, como é costume de alguns; antes admoestando-nos uns aos outros.”</p>
+          <cite class="quote__cite">Hebreus 10:25 — Almeida Revisada</cite>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo" href="/">
+            <img class="logo__mark" src="/assets/img/favicon.svg" alt="">
+            <span class="logo__text">Caminho</span>
+          </a>
+          <p class="meta">Apresentar Jesus, ensinar a Bíblia e acompanhar pessoas nos primeiros passos da fé — com calma e verdade.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Explorar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/jesus">Quem é Jesus</a></li>
+            <li><a class="site-footer__link" href="/biblia">Bíblia online</a></li>
+            <li><a class="site-footer__link" href="/reflexoes">Reflexões</a></li>
+            <li><a class="site-footer__link" href="/busca">Buscar no site</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Acompanhar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/igrejas">Encontrar uma igreja</a></li>
+            <li><a class="site-footer__link" href="/oracao">Pedir oração</a></li>
+            <li><a class="site-footer__link" href="/jesus#jornada">A jornada com Jesus</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Sobre</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/sobre">Sobre o projeto</a></li>
+            <li><a class="site-footer__link" href="/sobre#creditos">Créditos e licenças</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>© <span data-year></span> Caminho. Feito com fé.</p>
+        <p>Texto bíblico: Almeida Revisada (domínio público).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

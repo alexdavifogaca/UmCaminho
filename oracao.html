@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oração — Caminho</title>
+  <meta name="description" content="Peça oração: envie seu pedido com confiança e privacidade. Conheça também como orar, com o Pai Nosso e dicas simples.">
+  <meta property="og:title" content="Oração — Caminho">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/hero-oracao.jpg">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#171715">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="module" src="/assets/js/site.js"></script>
+  <script type="module" src="/assets/js/oracao.js"></script>
+</head>
+<body data-page="oracao">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header site-header--overlay" data-header>
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="/" aria-label="Caminho — página inicial">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="4" fill="#171715"/>
+          <path d="M10 27 C12 19 13.5 13 16 5 C18.5 13 20 19 22 27" fill="none" stroke="#D7C8A9" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="8" r="1.8" fill="#D7C8A9"/>
+        </svg>
+        <span class="logo__text">Caminho</span>
+      </a>
+      <div class="site-header__actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu-toggle>
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Abrir menu</span>
+        </button>
+        <nav class="site-nav" id="nav-principal" aria-label="Navegação principal" data-nav>
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/jesus" data-nav-page="jesus">Jesus</a></li>
+            <li><a class="site-nav__link" href="/biblia" data-nav-page="biblia">Bíblia</a></li>
+            <li><a class="site-nav__link" href="/reflexoes" data-nav-page="reflexoes">Reflexões</a></li>
+            <li><a class="site-nav__link" href="/igrejas" data-nav-page="igrejas">Igrejas</a></li>
+            <li><a class="site-nav__link" href="/busca" data-nav-page="busca">Busca</a></li>
+          </ul>
+          <a class="button button--small site-nav__cta" href="/oracao">Peça oração</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero hero--compact" aria-labelledby="oracao-titulo">
+      <img class="hero__media" src="/assets/img/hero-oracao.jpg" alt="Velas acesas no escuro, com luz quente" width="2000" height="1100" fetchpriority="high">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="kicker">Oração</p>
+          <h1 class="hero__title" id="oracao-titulo">Podemos orar por você</h1>
+          <p class="hero__text">Escreva o que vai no coração. Seu pedido é confidencial, não é publicado e não pede cadastro — apenas confiança.</p>
+          <p class="hero__caption">Foto: pixel2013 (CC0) · Wikimedia Commons</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-titulo">
+      <div class="container">
+        <div class="split">
+          <div>
+            <header class="section__header">
+              <p class="kicker">Envie seu pedido</p>
+              <h2 class="section__title" id="form-titulo">Como podemos interceder?</h2>
+              <p class="section__intro">Não precisa de palavras perfeitas. Um fio desenhado na vida dos que creem. Se preferir, permaneça totalmente anônimo.</p>
+            </header>
+
+            <form class="stack stack--loose" data-oracao-form novalidate>
+              <input type="hidden" name="marca">
+              <div class="field" hidden aria-hidden="true">
+                <label class="field__label" for="f-site">Deixe este campo em branco</label>
+                <input class="input" id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label class="field__label" for="f-nome">Seu nome (opcional)</label>
+                  <input class="input" id="f-nome" name="nome" type="text" autocomplete="name" maxlength="120">
+                  <p class="field__hint">Prefere anônimo? Deixe em branco.</p>
+                  <p class="field__error" data-error-for="nome" role="alert"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-email">E-mail (opcional)</label>
+                  <input class="input" id="f-email" name="email" type="email" autocomplete="email" maxlength="200">
+                  <p class="field__hint">Usado apenas se você desejar retorno. Nunca é publicado.</p>
+                  <p class="field__error" data-error-for="email" role="alert"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-categoria">Com o que podemos orar?</label>
+                <select class="select" id="f-categoria" name="categoria">
+                  <option value="">Escolha uma área</option>
+                  <option value="saude">Saúde</option>
+                  <option value="familia">Família e relacionamentos</option>
+                  <option value="trabalho">Trabalho e estudos</option>
+                  <option value="decisoes">Decisões importantes</option>
+                  <option value="financeiro">Dificuldades financeiras</option>
+                  <option value="outro">Outro momento difícil</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-pedido">Seu pedido de oração</label>
+                <textarea class="textarea" id="f-pedido" name="pedido" minlength="10" maxlength="3000" required placeholder="Escreva com suas próprias palavras…"></textarea>
+                <p class="field__hint">Mínimo de 10 caracteres. Seu relato é confidencial e não é publicado.</p>
+                <p class="field__error" data-error-for="pedido" role="alert"></p>
+              </div>
+              <p class="alert" data-form-status hidden role="alert"></p>
+              <div class="button-group">
+                <button class="button button--large" type="submit">Enviar pedido de oração</button>
+              </div>
+            </form>
+
+            <div class="state state--success" data-form-success hidden tabindex="-1">
+              <h3 class="state__title">Recebemos o seu pedido</h3>
+              <p class="state__text">Obrigado por confiar. Levaremos o que você compartilhou diante de Deus.</p>
+              <div class="state__actions">
+                <a class="button button--secondary" href="/biblia#sl/23">Ler o Salmo 23</a>
+                <a class="button button--quiet" href="/jesus#jornada">A jornada da fé</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack stack--loose">
+            <div class="verse-card">
+              <p class="verse-card__label">A promessa</p>
+              <blockquote class="verse-card__text">“Não andeis ansiosos por coisa alguma; antes em tudo sejam os vossos pedidos conhecidos diante de Deus pela oração e súplica com ações de graças.”</blockquote>
+              <p class="verse-card__reference"><a class="scripture-ref" href="/biblia#fp/4">Filipenses 4:6</a> — Almeida Revisada</p>
+            </div>
+            <div class="reading-block">
+              <p class="reading-block__label">O modelo que Jesus ensinou</p>
+              <p class="reading-block__text">“Portanto, orai vós deste modo: Pai nosso que estás nos céus, santificado seja o teu nome; venha o teu reino, seja feita a tua vontade, assim na terra como no céu; o pão nosso de cada dia nos dá hoje; e perdoa-nos as nossas dívidas, assim como nós também temos perdoado aos nossos devedores; e não nos deixes entrar em tentação; mas livra-nos do mal.”</p>
+              <p class="reading-block__reference"><a class="scripture-ref" href="/biblia#mt/6">Mateus 6:9-13</a></p>
+            </div>
+            <div class="quote">
+              <p class="quote__text">Orar não é mudar a letra do que acontece; é lembrar quem escreve a história.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight theme-raised" aria-labelledby="como-orar-titulo">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <p class="kicker">Para começar a orar</p>
+          <h2 class="section__title" id="como-orar-titulo">Quatro passos de uma conversa</h2>
+          <p class="section__intro">Se orar é novo para você, não há cerimônia. Uma conversa simples tem este ritmo.</p>
+        </header>
+        <div class="journey">
+          <ol class="journey__steps">
+            <li class="journey-step is-current">
+              <span class="journey-step__marker">1</span>
+              <h3 class="journey-step__title">Agradeça</h3>
+              <p class="journey-step__text">Comece pelo reconhecimento: “Deus, obrigado por…”. O gratidão muda o lugar de onde se fala.</p>
+            </li>
+            <li class="journey-step">
+              <span class="journey-step__marker">2</span>
+              <h3 class="journey-step__title">Peça</h3>
+              <p class="journey-step__text">Traga o que pesa: saúde, sustos, decisões, pessoas. Deus acolhe pedidos — inclusive os que você tem vergonha de dizer.</p>
+            </li>
+            <li class="journey-step">
+              <span class="journey-step__marker">3</span>
+              <h3 class="journey-step__title">Peça perdão</h3>
+              <p class="journey-step__text">Se algo vem à lembrança, entregue: “perdoa-me”. Nada de sumário — a mesa já está posta.</p>
+            </li>
+            <li class="journey-step">
+              <span class="journey-step__marker">4</span>
+              <h3 class="journey-step__title">Descanse</h3>
+              <p class="journey-step__text">Termine com confiança: “faça a tua vontade”. Orar não é insistir até dobrar Deus; é alinhar o coração ao dele.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo" href="/">
+            <img class="logo__mark" src="/assets/img/favicon.svg" alt="">
+            <span class="logo__text">Caminho</span>
+          </a>
+          <p class="meta">Apresentar Jesus, ensinar a Bíblia e acompanhar pessoas nos primeiros passos da fé — com calma e verdade.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Explorar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/jesus">Quem é Jesus</a></li>
+            <li><a class="site-footer__link" href="/biblia">Bíblia online</a></li>
+            <li><a class="site-footer__link" href="/reflexoes">Reflexões</a></li>
+            <li><a class="site-footer__link" href="/busca">Buscar no site</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Acompanhar</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/igrejas">Encontrar uma igreja</a></li>
+            <li><a class="site-footer__link" href="/oracao">Pedir oração</a></li>
+            <li><a class="site-footer__link" href="/jesus#jornada">A jornada com Jesus</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Sobre</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="/sobre">Sobre o projeto</a></li>
+            <li><a class="site-footer__link" href="/sobre#creditos">Créditos e licenças</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>© <span data-year></span> Caminho. Feito com fé.</p>
+        <p>Texto bíblico: Almeida Revisada (domínio público).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

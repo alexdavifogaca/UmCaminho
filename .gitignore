@@ -1,0 +1,6 @@
+# Segredos e dados locais
+.env
+data/
+# Cache de build (fonte bíblica baixada)
+scripts/cache/
+node_modules/
