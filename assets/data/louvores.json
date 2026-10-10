@@ -1,0 +1,79 @@
+{
+  "atualizado": "2026-10-10",
+  "nota": "Catálogo de louvores. Para cada item: 'capa' (caminho local em /assets/img/...), 'spotify' e 'youtube' (links exatos; se ausentes, usa-se a busca por 'busca'). 'letra' é uma lista de estrofes (e refrão).",
+  "louvores": [
+    {
+      "id": "sublime-graca",
+      "titulo": "Sublime Graça",
+      "original": "Amazing Grace",
+      "autor": "John Newton",
+      "ano": 1779,
+      "tema": "Graça",
+      "referencia": "Efésios 2:8",
+      "refLink": "/biblia#ef/2",
+      "cor": "#D7C8A9",
+      "capa": null,
+      "busca": "Sublime Graça John Newton",
+      "letra": [
+        "Sublime graça de Jesus,\nque a um pecador salvou!\nEu andava perdido, mas\na graça me encontrou.",
+        "Refrão:\nSublime graça, doce som,\nque salva o pecador!\nEstava cego e agora vejo;\nperdido, e salvo estou.",
+        "Foi a graça que me ensinou\na temer e a confiar,\ne quão preciosa é essa graça\nna hora de chegar."
+      ],
+      "reflexao": "A letra nasceu da vida de um homem que se sabia perdoado. John Newton foi capitão de navio negreiro antes de se converter; por isso “sublime graça” não é poesia bonita, é testemunho. O louvor lembra que ninguém é bom demais para não precisar dela, nem perdido demais para ser alcançado."
+    },
+    {
+      "id": "castelo-forte",
+      "titulo": "Castelo Forte",
+      "original": "Ein feste Burg",
+      "autor": "Martinho Lutero",
+      "ano": 1529,
+      "tema": "Confiança",
+      "referencia": "Salmos 46:1",
+      "refLink": "/biblia#sl/46",
+      "cor": "#AEBB9E",
+      "capa": null,
+      "busca": "Castelo Forte Lutero",
+      "letra": [
+        "Castelo forte é o nosso Deus,\nespada e bom escudo;\ncom seu poder defende os seus\nem todo transe agudo.",
+        "Nosso antigo inimigo\ncom fúria quer nos devorar;\nmas o Vencedor luta por nós,\ne Deus nos vem guardar."
+      ],
+      "reflexao": "Lutero escreveu este hino em tempos de perseguição, quando a fé parecia frágil diante de um mundo hostil. A imagem do castelo não promete uma vida sem batalha — promete que não a enfrentamos sozinhos. O inimigo pode ser forte; o Vencedor que luta por nós é mais forte."
+    },
+    {
+      "id": "santo-santo-santo",
+      "titulo": "Santo, Santo, Santo",
+      "original": "Holy, Holy, Holy",
+      "autor": "Reginald Heber",
+      "ano": 1826,
+      "tema": "Adoração",
+      "referencia": "Isaías 6:3",
+      "refLink": "/biblia#is/6",
+      "cor": "#D39D90",
+      "capa": null,
+      "busca": "Santo Santo Santo hino",
+      "letra": [
+        "Santo, santo, santo,\nSenhor Deus de poder!\nOs céus e a terra proclamam\no teu nome sem cessar.",
+        "Santo, santo, santo,\nmisericordioso e bom,\nDeus em três pessoas,\ngloriosa Trindade, és tu!"
+      ],
+      "reflexao": "Antes de pedir qualquer coisa, o louvor olha para quem Deus é. Repetir “santo” é deixar de lado a pressa e reconhecer que ele é maior do que conseguimos entender. É o cântico de quem se aproxima com reverência — não com medo, mas com espanto."
+    },
+    {
+      "id": "paz-perfeita-paz",
+      "titulo": "Paz, Perfeita Paz",
+      "original": "It Is Well with My Soul",
+      "autor": "Horatio Spafford",
+      "ano": 1873,
+      "tema": "Esperança",
+      "referencia": "Filipenses 4:7",
+      "refLink": "/biblia#fp/4",
+      "cor": "#B6B0A4",
+      "capa": null,
+      "busca": "Paz Perfeita Paz It Is Well",
+      "letra": [
+        "Quando em paz está minha alma,\nseja qual for a dor,\nposso dizer: é bem comigo,\npois Cristo é meu Senhor.",
+        "Refrão:\nÉ bem, é bem com minha alma!\nPaz perfeita encontrei\nna cruz de Cristo, meu Salvador;\né bem, é bem comigo."
+      ],
+      "reflexao": "Horatio Spafford escreveu este hino depois de perder as filhas num naufrágio. Mesmo assim, disse: “é bem com minha alma”. A paz de que ele fala não depende das circunstâncias, mas de quem está no barco com você — a paz que “excede todo o entendimento” (Filipenses 4:7)."
+    }
+  ]
+}

@@ -133,7 +133,7 @@ function buildVerses(books) {
 /* ------------------------------------------------------------------ */
 const SEARCH_PAGES = [
   "index.html", "jesus.html", "biblia.html", "reflexoes.html",
-  "igrejas.html", "oracao.html", "sobre.html",
+  "louvores.html", "igrejas.html", "oracao.html", "sobre.html",
   "reflexao-pao-e-peixe.html",
   "reflexao-quando-o-caminho-escurece.html",
   "reflexao-o-que-significa-crer.html",
