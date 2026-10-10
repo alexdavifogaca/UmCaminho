@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "build": "node scripts/build.js",
+    "build:data": "node scripts/build.js",
     "dev": "node server.js"
   },
   "engines": {
