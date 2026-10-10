@@ -46,7 +46,7 @@ async function init() {
   };
 
   const render = (list) => {
-    grid.replaceChildren(...list.map(card));
+    grid.replaceChildren(...list.map((item, i) => card(item, i)));
     if (count) {
       count.textContent =
         list.length === louvores.length
@@ -67,7 +67,7 @@ async function init() {
 /* ------------------------------------------------------------------ */
 /* Cartão de um louvor                                                 */
 /* ------------------------------------------------------------------ */
-function card(item) {
+function card(item, i) {
   const meta = [item.tema, item.autor, item.ano].filter(Boolean).join(" · ");
 
   const links = [];
@@ -102,7 +102,7 @@ function card(item) {
   ]);
 
   return el("article", { class: "card louvor" }, [
-    cover(item),
+    cover(item, i),
     el("div", { class: "card__body" }, [
       el("p", { class: "card__meta", text: meta }),
       el("h3", { class: "card__title", text: item.titulo }),
@@ -116,7 +116,7 @@ function card(item) {
 /* ------------------------------------------------------------------ */
 /* Capa: imagem local ou capa gerada (monograma sobre cor)             */
 /* ------------------------------------------------------------------ */
-function cover(item) {
+function cover(item, i) {
   const wrap = el("div", { class: "card__media louvor__cover" });
   if (item.capa) {
     wrap.appendChild(
@@ -124,8 +124,10 @@ function cover(item) {
     );
     return wrap;
   }
+  const GLOWS = ["18% 8%", "82% 12%", "14% 88%", "82% 86%"];
   wrap.classList.add("louvor__cover--gen");
-  wrap.style.setProperty("--louvor-cor", item.cor || "#D7C8A9");
+  wrap.style.setProperty("--louvor-cor", item.cor || "#C9A24B");
+  wrap.style.setProperty("--louvor-glow", GLOWS[i % GLOWS.length]);
   wrap.appendChild(el("span", { class: "louvor__initials", "aria-hidden": "true", text: initials(item.titulo) }));
   wrap.appendChild(el("span", { class: "louvor__cover-title", text: item.original || item.titulo }));
   return wrap;

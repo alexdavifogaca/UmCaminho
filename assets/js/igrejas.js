@@ -9,9 +9,7 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
 const DENOMS = {
-  catholic: "Católica",
   evangelical: "Evangélica",
-  orthodox: "Ortodoxa",
   anglican: "Anglicana",
   lutheran: "Luterana",
   baptist: "Batista",

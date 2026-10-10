@@ -369,8 +369,8 @@ async function fetchOverpass(query, timeoutMs = 9000) {
 
 function overpassQuery(lat, lon, raioKm) {
   return `[out:json][timeout:12];(
-    node["amenity"="place_of_worship"]["religion"="christian"](around:${raioKm * 1000},${lat},${lon});
-    way["amenity"="place_of_worship"]["religion"="christian"](around:${raioKm * 1000},${lat},${lon});
+    node["amenity"="place_of_worship"]["religion"="christian"]["denomination"!~"catholic|orthodox"](around:${raioKm * 1000},${lat},${lon});
+    way["amenity"="place_of_worship"]["religion"="christian"]["denomination"!~"catholic|orthodox"](around:${raioKm * 1000},${lat},${lon});
   );out center 40;`;
 }
 
@@ -413,9 +413,11 @@ async function handleIgrejas(req, res, url) {
   if (elements) {
     const vistos = new Set();
     const igrejas = [];
+    const naoEvangelica = /catholic|orthodox/i;
     for (const el of elements) {
       const n = normalizar(el);
-      if (!n || vistos.has(n.nome + n.lat.toFixed(3))) continue;
+      if (!n || naoEvangelica.test(n.denom || "")) continue;
+      if (vistos.has(n.nome + n.lat.toFixed(3))) continue;
       vistos.add(n.nome + n.lat.toFixed(3));
       igrejas.push(n);
     }

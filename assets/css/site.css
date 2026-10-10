@@ -139,7 +139,11 @@
 }
 
 /* Capa quadrada (álbum), ao contrário do 3:2 dos cartões comuns */
-.louvor__cover { aspect-ratio: 1 / 1; }
+.louvor__cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
 
 .louvor__cover--gen {
   display: grid;
@@ -147,9 +151,21 @@
   gap: var(--space-2);
   padding: var(--space-4);
   text-align: center;
+  background-color: var(--color-charcoal);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image:
-    radial-gradient(120% 120% at 18% 8%, color-mix(in srgb, var(--louvor-cor) 55%, transparent), transparent 62%),
-    linear-gradient(150deg, color-mix(in srgb, var(--louvor-cor) 26%, var(--color-charcoal)), var(--color-charcoal-2));
+    radial-gradient(130% 130% at var(--louvor-glow, 18% 8%), var(--louvor-cor) 0%, transparent 62%),
+    linear-gradient(155deg, transparent 20%, rgb(0 0 0 / 0.5) 100%);
+}
+
+.louvor__cover--gen::before {
+  content: "";
+  position: absolute;
+  inset: var(--space-2);
+  border: 1px solid rgb(242 237 227 / 0.16);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .louvor__initials {
@@ -159,6 +175,7 @@
   line-height: 1;
   color: var(--color-paper);
   letter-spacing: 0.02em;
+  text-shadow: 0 1px 10px rgb(0 0 0 / 0.4);
 }
 
 .louvor__cover-title {
