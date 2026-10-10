@@ -1,0 +1,38 @@
+[
+  {
+    "id": "exemplo/1",
+    "nome": "Igreja Exemplo — Centro",
+    "denom": "evangelical",
+    "cidade": "Sua cidade",
+    "rua": "Rua das Flores, 100",
+    "telefone": null,
+    "site": null,
+    "horarios": "Su 10:00",
+    "lat": -23.5505,
+    "lon": -46.6333
+  },
+  {
+    "id": "exemplo/2",
+    "nome": "Comunidade Exemplo — Bairro",
+    "denom": "catholic",
+    "cidade": "Sua cidade",
+    "rua": "Av. Central, 250",
+    "telefone": null,
+    "site": null,
+    "horarios": null,
+    "lat": -23.555,
+    "lon": -46.64
+  },
+  {
+    "id": "exemplo/3",
+    "nome": "Congregação Exemplo — Jardim",
+    "denom": null,
+    "cidade": "Sua cidade",
+    "rua": "Rua do Sol, 45",
+    "telefone": null,
+    "site": null,
+    "horarios": null,
+    "lat": -23.548,
+    "lon": -46.628
+  }
+]

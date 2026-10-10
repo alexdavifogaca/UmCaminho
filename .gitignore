@@ -1,6 +1,7 @@
 # Segredos e dados locais
 .env
-data/
+/data/
+.vercel
 # Cache de build (fonte bíblica baixada)
-scripts/cache/
+/scripts/cache/
 node_modules/

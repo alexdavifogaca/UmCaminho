@@ -21,11 +21,16 @@ const fsp = fs.promises;
 const path = require("path");
 const crypto = require("crypto");
 const zlib = require("zlib");
+const os = require("os");
 const { URL } = require("url");
 
 const ROOT = __dirname;
 const PORT = Number(process.env.PORT || 3000);
-const DATA_DIR = path.join(ROOT, "data");
+const SERVERLESS = !!(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+// Em serverless o diretório do projeto é somente leitura; usamos /tmp.
+const DATA_DIR = SERVERLESS
+  ? path.join(process.env.DATA_DIR || path.join(os.tmpdir(), "caminho-data"))
+  : path.join(ROOT, "data");
 const ORACOES_FILE = path.join(DATA_DIR, "oracoes.jsonl");
 
 /* Diretórios/arquivos nunca servidos */
@@ -75,7 +80,7 @@ const log = (line) => console.log(`${new Date().toISOString()} ${line}`);
 function clientIp(req) {
   // Confiamos apenas no socket; proxies reversos devem ser configurados
   // explicitamente (variável TRUST_PROXY=1).
-  if (process.env.TRUST_PROXY === "1") {
+  if (process.env.TRUST_PROXY === "1" || SERVERLESS) {
     const fwd = req.headers["x-forwarded-for"];
     if (typeof fwd === "string" && fwd.length < 200) return fwd.split(",")[0].trim();
   }
@@ -475,7 +480,10 @@ async function handleLocalizar(req, res, url) {
 /* ------------------------------------------------------------------ */
 /* Roteamento                                                          */
 /* ------------------------------------------------------------------ */
-const server = http.createServer(async (req, res) => {
+/* ------------------------------------------------------------------ */
+/* Handler exportável (usado pelo servidor local e pelo Vercel)        */
+/* ------------------------------------------------------------------ */
+async function handleRequest(req, res) {
   const started = now();
   res.on("finish", () => {
     log(`${req.socket.remoteAddress} ${req.method} ${req.url} -> ${res.statusCode} (${now() - started}ms)`);
@@ -512,8 +520,13 @@ const server = http.createServer(async (req, res) => {
     log(`ERRO: ${err.stack || err.message}`);
     if (!res.headersSent) sendError(res, 500, "Erro interno.");
   }
-});
+}
 
-server.listen(PORT, () => {
-  log(`Caminho ouvindo em http://localhost:${PORT}`);
-});
+module.exports = handleRequest;
+module.exports.handleRequest = handleRequest;
+
+if (require.main === module) {
+  http.createServer(handleRequest).listen(PORT, () => {
+    log(`Caminho ouvindo em http://localhost:${PORT}`);
+  });
+}

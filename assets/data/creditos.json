@@ -1,0 +1,44 @@
+{
+  "imagens": [
+    {
+      "arquivo": "assets/img/hero-caminho.jpg",
+      "autor": "simon from Austria (simon_berger)",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:The_road_will_bring_you_through_the_fog._-_Flickr_-_simon_berger.jpg"
+    },
+    {
+      "arquivo": "assets/img/hero-jesus.jpg",
+      "autor": "Делфина",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Зора_над_Дојранско_Езеро.jpg"
+    },
+    {
+      "arquivo": "assets/img/hero-biblia.jpg",
+      "autor": "Lfc2025a",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Kedrodasos_night_sky.jpg"
+    },
+    {
+      "arquivo": "assets/img/hero-oracao.jpg",
+      "autor": "pixel2013",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Candels_in_the_dark.jpg"
+    },
+    {
+      "arquivo": "assets/img/hero-igrejas.jpg",
+      "autor": "Evedawn99",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Metropolitan_African_Methodist_Episcopal_Church,_Interior,_2025.jpg"
+    }
+  ],
+  "texto_biblico": {
+    "nome": "Almeida Revisada",
+    "licenca": "Domínio público",
+    "pagina": "https://github.com/thiagobodruk/biblia"
+  },
+  "fontes": {
+    "nome": "Cormorant Garamond, Lora, Inter",
+    "licenca": "SIL Open Font License 1.1",
+    "pagina": "https://fonts.google.com"
+  }
+}
