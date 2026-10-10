@@ -63,7 +63,7 @@ const SECURITY_HEADERS = {
     "frame-ancestors 'self'; form-action 'self'; " +
     "img-src 'self' data:; style-src 'self' 'unsafe-inline'; " +
     "script-src 'self'; font-src 'self'; connect-src 'self'; " +
-    "frame-src https://www.openstreetmap.org",
+    "frame-src https://www.openstreetmap.org https://open.spotify.com",
   "X-Content-Type-Options": "nosniff",
   "Referrer-Policy": "strict-origin-when-cross-origin",
   "Permissions-Policy": "geolocation=(self), camera=(), microphone=(), payment=(), usb=()",

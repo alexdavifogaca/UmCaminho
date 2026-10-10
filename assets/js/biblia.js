@@ -151,10 +151,11 @@ function updatePagination(book) {
 }
 
 async function navigate() {
-  const hash = location.hash.replace(/^#\/?/, "");
-  const m = hash.match(/^([a-z0-9]+)\/(\d+)$/i);
-  const meta = state.index.old.concat(state.index.new).find((b) => b.abbrev === (m ? m[1] : state.book));
-  if (meta) state.book = meta.abbrev;
+  const hash = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+  const m = hash.match(/^([^/]+)\/(\d+)$/);
+  const all = state.index.old.concat(state.index.new);
+  const meta = all.find((b) => b.abbrev === (m ? m[1] : state.book)) || all[0];
+  state.book = meta.abbrev;
   state.chapter = m ? Math.min(Math.max(parseInt(m[2], 10), 1), meta.chapters) : 1;
   state.selected.clear();
 

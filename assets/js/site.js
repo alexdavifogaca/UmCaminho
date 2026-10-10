@@ -176,7 +176,7 @@ function initVerseOfDay() {
         root.querySelector("[data-verse-text]")?.replaceChildren(
           Object.assign(document.createElement("span"), {
             className: "text-muted",
-            textContent: "O versículo do dia pôde ser carregado. Recarregue a página.",
+            textContent: "O versículo do dia não pôde ser carregado. Recarregue a página.",
           })
         );
       }
